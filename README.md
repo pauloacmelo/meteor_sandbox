@@ -37,6 +37,8 @@
   * 3 Options: Deploy on Meteor subdomain, Modulus, Meteor Up (personal server)
   * Meteor
     - `meteor deploy bolotas-microscope.meteor.com`
+    - Access Mongo Shell: `meteor mongo bolotas-microscope`
+    - Access app log: `meteor logs bolotas-microscope`
   * Modulus
     - `npm install -g modulus` (only first time)
     - `modulus login` (only first time)
@@ -47,4 +49,27 @@
   * TODO: Meteor Up
 
 ##3 - Templates
+  * Handlebars
+    - Partials: Define as  `<template name=templateName>` and use in `{{>templateName}}`
+    - Expressions: `{{2+2}}`
+    - Block Helpers: `{{#each posts}} {{post}} {{/each}}`
+  * Template Managers
+    - Serves data for views
+    - Convention: Name the manager after the template (partials)
+  * Template Helpers
+    - Methods to help
+
+##4 - Collections
+  * Available for client and server
+  * `var` limits the scope to current file
+  * Is a adapter/model on the server-side and a local cache on the client-side
+  * Server-side:
+    - Access Mongo shell with `meteor mongo`
+    - Insert: `db.posts.insert({title: "A new post"});`
+    - Select: `db.posts.find();`
+  * Client-side
+    - MiniMongo
+    - Define: `Posts = new Meteor.Collection('posts');`
+    - Select: `Posts.find();`
+  * Updated on all instances client and server
   * 
