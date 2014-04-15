@@ -71,5 +71,6 @@
     - MiniMongo
     - Define: `Posts = new Meteor.Collection('posts');`
     - Select: `Posts.find();`
-  * Updated on all instances client and server
-  * 
+  * autopublish: Updated on all instances client and server
+    - meteor remove autopublish 
+  * `meteor reset` clears db
