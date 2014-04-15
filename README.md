@@ -1,11 +1,11 @@
-##Introduction
+##1 - Introduction
 
   * Synchronous (OS Folder Analogy)
   * Built on top of Node.js
   * For real-time web apps
   * Shareable Javascript on both sides (server/client)
 
-##Getting Started
+##2 - Getting Started
   * Packages
     - Core packages
     - Smart packages (37) (install via `meteor add packagename`)
@@ -33,7 +33,18 @@
     - Embrace the ecosystem: Open source roots
     - Simplicity equals productivity: Maintain a clean and beautiful code
 
-##Deployment
-  * 3 Options: Deploy on Meteor, Modulus, Meteor Up (Proprietary server)
+##2.5 - Deployment
+  * 3 Options: Deploy on Meteor subdomain, Modulus, Meteor Up (personal server)
   * Meteor
-    - 
+    - `meteor deploy bolotas-microscope.meteor.com`
+  * Modulus
+    - `npm install -g modulus` (only first time)
+    - `modulus login` (only first time)
+    - `modulus project create` (for each project)
+    - Create MongoDB database on web interface (for each project)
+    - `modulus env set MONGO_URL "mongodb://<user>:<pass>@mongo.onmudulus.net:27817/<database_name>"` (for each project)
+    - `modulus deploy`
+  * TODO: Meteor Up
+
+##3 - Templates
+  * 
